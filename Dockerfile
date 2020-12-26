@@ -105,7 +105,7 @@ RUN apt-get update && apt-get install -y -q \
     tesseract-ocr-fin \
     tesseract-ocr-swe \
     tesseract-ocr-lav \
-    tesseract-ocr-dan && \
+    tesseract-ocr-ces && \
     apt-get clean && \
     apt-get autoremove -y -q && \
     rm -rf /var/lib/apt/lists/* && \
