@@ -64,7 +64,7 @@ RUN mvn -Pprod -DskipTests clean install && \
 # Licensed under GPL v3
 ARG TARGETARCH
 WORKDIR /tmp
-RUN if [ ${TARGETARCH} = arm ]; then wget -O ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-armhf-static.tar.xz; else wget -O ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-${TARGETARCH}-static.tar.xz; fi
+RUN wget -O ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz; fi
 RUN tar -xJf ffmpeg.tar.xz -C /tmp --strip-components=1
 RUN cp "/tmp/ffmpeg" /usr/local/bin
 
